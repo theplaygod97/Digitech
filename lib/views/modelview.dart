@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:digitech/model/modelname.dart';
+import 'package:digitech/views/pdetailsview.dart';
 import 'package:digitech/widgets/modellistview.dart';
 import 'package:digitech/widgets/persistheader.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -70,11 +71,24 @@ class _modelviewState extends State<modelview> {
           SliverFixedExtentList(
             itemExtent: 150,
             delegate: SliverChildBuilderDelegate((context, index) {
-              return modellistview(
-                  modelList[index].name,
-                  modelList[index].imgUrl,
-                  modelList[index].price,
-                  modelList[index].desc);
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => pdetailsview(
+                                mName: modelList[index].name,
+                                mImgUrl: modelList[index].imgUrl,
+                                mDesc: modelList[index].desc,
+                                mPrice: modelList[index].price,
+                              )));
+                },
+                child: modellistview(
+                    modelList[index].name,
+                    modelList[index].imgUrl,
+                    modelList[index].price,
+                    modelList[index].desc),
+              );
             }, childCount: modelList.length),
           ),
         ],

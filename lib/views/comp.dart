@@ -51,7 +51,6 @@ class _MyHomePageState extends State<comp> {
         elevation: 0,
         leading: Icon(Icons.menu),
         title: Text("Home"),
-
       ),
       body: SafeArea(
         child: Container(
@@ -92,9 +91,7 @@ class _MyHomePageState extends State<comp> {
                         margin: EdgeInsets.symmetric(horizontal: 40),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.white
-
-                        ),
+                            color: Colors.white),
                         child: Center(
                             child: Text(
                           "Shop Now",
@@ -143,11 +140,9 @@ class _MyHomePageState extends State<comp> {
                                     margin: EdgeInsets.symmetric(
                                         horizontal: 45, vertical: 75),
                                     decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                        color: Colors.white38,
-
+                                      borderRadius: BorderRadius.circular(10),
+                                      color: Colors.white38,
                                     ),
-
                                     child: Text(
                                       item.name,
                                       style: TextStyle(
@@ -191,6 +186,4 @@ class _MyHomePageState extends State<comp> {
       ),
     );
   }
-
-
 }

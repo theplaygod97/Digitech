@@ -78,3 +78,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database-ktx:19.4.0'
 
 }
+android {
+      defaultConfig {
+        multiDexEnabled true
+        }
+   }

@@ -21,6 +21,8 @@ dependencies:
   curved_navigation_bar: ^0.3.4
   bottom_navy_bar: ^5.5.0
   cached_network_image: ^2.3.2+1
+  flutter_svg: ^0.19.1
+  google_fonts: ^1.1.0 
 
 
 dev_dependencies:

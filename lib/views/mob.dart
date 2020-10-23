@@ -117,11 +117,9 @@ class _ImageGridItemState extends State<ImageGridItem>
         child: ShaderMask(
             shaderCallback: (rect) {
               return LinearGradient(
-                      tileMode: TileMode.mirror,
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                      colors: [animationOne.value, animationTwo.value])
-                  .createShader(rect, textDirection: TextDirection.ltr);
+                begin: Alignment.centerLeft,
+                end: Alignment.centerRight,
+              ).createShader(rect, textDirection: TextDirection.ltr);
             },
             child: SizedBox(child: LoadingBlock())),
       );
@@ -136,7 +134,8 @@ class _ImageGridItemState extends State<ImageGridItem>
     super.initState();
     getImage();
     controllerOne = AnimationController(
-        duration: Duration(milliseconds: 2000), vsync: this);
+      duration: Duration(milliseconds: 2000),
+    );
     animationOne = ColorTween(begin: Colors.grey, end: Colors.white70)
         .animate(controllerOne);
     animationTwo = ColorTween(begin: Colors.white70, end: Colors.grey)
